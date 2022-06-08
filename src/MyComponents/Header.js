@@ -1,5 +1,6 @@
 import React from 'react' //rfc -> enter using React extension of VSCode
 
+//navbar from https://getbootstrap.com/docs/5.2/components/navbar/ with some minor edits
 export default function Header() {
     return (
         <nav className="navbar navbar-expand-lg bg-light">
