@@ -1,3 +1,72 @@
+# Notes
+
+npm - package manager
+npx - excute only package
+node - run Javascript outside browser -> on machine and **servers**
+
+React - Single Page Application
+
+npx create-react-app projectName
+
+Open in VSCode
+
+npm start - start server (opens browser)
+
+Local:            http://localhost:3000        
+On Your Network:  http://192.168.56.1:3000  --> On same Wifi
+
+In public  folder
+- favicon.ico - icon on chrome
+-index.html - Single page index.html -change title, add bootstrap etc., limited use
+
+src folder - all development done here
+- App.js - main file
+
+React - components mein tuti hui
+
+JSX - Javascript Syntax Extension - insert dynamic javascript to react component - mixture of html and javascript
+
+{logo} javascript variable has {}
+eg. { javascript code} as App.js mein html bhi hai so javascript {} ke andar hi hoga
+
+import './App.css'; - is line se CSS add hoti hai page mein
+
+2 types of component - class and function based
+
+Abhi function based karo
+
+IMP - inside return start and end with empty <> </> to wrap entire code in one thing
+i.e.
+
+<>
+.......................Code.................
+</>
+
+For tabs like hr which have no end / type it as <hr /> instead of <hr>
+
+REPLACE class with className (as class not in JSX due to conflicts>
+
+Can copy paste from https://react-bootstrap.github.io/ if you want
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
