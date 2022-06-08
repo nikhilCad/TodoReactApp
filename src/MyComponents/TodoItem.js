@@ -2,10 +2,10 @@
 
 import React from 'react'
 
-export const Todo = () => {
+export const TodoItem = () => {
     return (
         <div>
-            Todo Chal Gaya o~o
+            TodoItem Chal Gaya o~o
         </div>
     )
 }
