@@ -1,5 +1,7 @@
 # Notes
 
+class = "good red hi" has 3 classes good, red and hi
+
 npm - package manager
 npx - excute only package
 node - run Javascript outside browser -> on machine and **servers**
