@@ -28,7 +28,7 @@ export default function Header(props) { //use as {props.var1} {props.var2} etc i
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
-      : "No search bar"}
+      : ""}
 
     </div>
   </div>
