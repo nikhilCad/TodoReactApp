@@ -1,7 +1,7 @@
 //rafc from ES7 extension
 
 import React from 'react';
-import {TodoItem} from '../MyComponents/TodoItem';// .. to go up one place
+import {TodoItem} from './TodoItem';// .. to go up one place
 
 //Every Todos has TodoItms, see line <TodoItem todo = {props.todos[0]}/> 
 export const Todos = (props) => {
