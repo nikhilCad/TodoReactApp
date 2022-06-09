@@ -10,13 +10,14 @@ import {TodoItem} from './TodoItem';// .. to go up one place
 
 //Todos made in App.js
 //onDelete called when button clicked in TodoItems, go to App.js for definition
+//the key line is to remove error to make evry item unique
 export const Todos = (props) => {
     return (
         <div className="container">
             <h3 className="text-center my-3">Todos List</h3><br></br>
 
             {props.todos.map((todo)=>{
-                return <TodoItem todo = {todo} onDelete={props.onDelete}/>
+                return <TodoItem todo = {todo} key={todo.sno} onDelete={props.onDelete}/>
             })}
             
         </div>

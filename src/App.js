@@ -6,9 +6,9 @@ import {Footer} from './MyComponents/Footer';
  
 function App() {
 
-  //arrow function of javascript  
-  const onDelete =()=>{
-      console.log("I am ondelete")
+  //arrow function of javascript, called from TodoItem.js 
+  const onDelete =(todo)=>{
+      console.log("I am ondelete of todo", todo)
   }
   
   let todos = [
