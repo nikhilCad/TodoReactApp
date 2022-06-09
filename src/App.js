@@ -5,6 +5,11 @@ import {Todos} from './MyComponents/Todos'; //use {} if using rafc as it is tryi
 import {Footer} from './MyComponents/Footer';
  
 function App() {
+
+  //arrow function of javascript  
+  const onDelete =()=>{
+      console.log("I am ondelete")
+  }
   
   let todos = [
     {
@@ -28,7 +33,7 @@ function App() {
     <>
    
     <Header title="My Todos List" searchBar={false}/>
-    <Todos todos={todos}/>
+    <Todos todos={todos} onDelete={onDelete}/>
     <Footer/>
 
     </>
