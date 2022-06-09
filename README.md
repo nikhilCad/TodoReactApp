@@ -50,7 +50,16 @@ REPLACE class with className (as class not in JSX due to conflicts>
 
 Can copy paste from https://react-bootstrap.github.io/ if you want
 
+{ props.searchBar ?
 
+
+      <form className="d-flex" role="search">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button className="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      : "No search bar"
+      
+      }
 
 
 
