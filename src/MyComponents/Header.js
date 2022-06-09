@@ -1,4 +1,6 @@
 import React from 'react' //rfc -> enter using React extension of VSCode
+import PropTypes from 'prop-types'
+
 
 //navbar from https://getbootstrap.com/docs/5.2/components/navbar/ with some minor edits
 export default function Header(props) { //use as {props.var1} {props.var2} etc its just a parameter see App.js <Header/>
@@ -33,4 +35,9 @@ export default function Header(props) { //use as {props.var1} {props.var2} etc i
 </nav>
 
     )
+}
+
+//propTypes for typecasting
+Header.propTypes = {
+  title: PropTypes.string //Throws error if we put int in App.js, but still displays
 }
