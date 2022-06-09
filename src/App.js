@@ -5,12 +5,30 @@ import {Todos} from './MyComponents/Todos'; //use {} if using rafc as it is tryi
 import {Footer} from './MyComponents/Footer';
  
 function App() {
-  let myVariable = 345;
+  
+  let todos = [
+    {
+      sno: 1,
+      title: "Go to market",
+      desc: "Get vegetables"
+    },
+    {
+      sno: 2,
+      title: "Go to market 2",
+      desc: "Get fruits"
+    },
+    {
+      sno: 3,
+      title: "Go to market 3",
+      desc: "Get pens"
+    }
+  ]
+
   return (
     <>
    
     <Header title="My Todos List" searchBar={false}/>
-    <Todos/>
+    <Todos todos={todos}/>
     <Footer/>
 
     </>

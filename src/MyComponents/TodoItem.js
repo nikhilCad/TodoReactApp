@@ -2,10 +2,11 @@
 
 import React from 'react'
 
-export const TodoItem = () => {
+export const TodoItem = ({todo}) => {
     return (
         <div>
-            TodoItem Chal Gaya o~o
+            <h4>{todo.title}</h4>
+            <p>{todo.desc}</p>
         </div>
     )
 }
