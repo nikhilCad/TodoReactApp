@@ -1,11 +1,11 @@
 import React from 'react' //rfc -> enter using React extension of VSCode
 
 //navbar from https://getbootstrap.com/docs/5.2/components/navbar/ with some minor edits
-export default function Header() {
+export default function Header(props) { //use as {props.var1} {props.var2} etc its just a parameter see App.js <Header/>
     return (
         <nav className="navbar navbar-expand-lg bg-light">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Todos List</a>
+    <a className="navbar-brand" href="#">{props.title}</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -20,10 +20,14 @@ export default function Header() {
         
 
       </ul>
+
+      { props.searchBar ?
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
+      : "No search bar"}
+
     </div>
   </div>
 </nav>
