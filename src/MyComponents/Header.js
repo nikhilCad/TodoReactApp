@@ -37,7 +37,14 @@ export default function Header(props) { //use as {props.var1} {props.var2} etc i
     )
 }
 
+//defaultProps
+Header.defaultProps = {
+  title : "Your Title Here", //if not givne in App.js use this
+  searchBar : true 
+}
+
 //propTypes for typecasting
 Header.propTypes = {
-  title: PropTypes.string //Throws error if we put int in App.js, but still displays
+  title: PropTypes.string, //Throws error if we put int in App.js, but still displays
+  searchBar: PropTypes.bool.isRequired //isRequired means daalna hi daalna hai
 }
