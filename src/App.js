@@ -3,15 +3,23 @@ import './App.css';
 import Header from './MyComponents/Header';
 import {Todos} from './MyComponents/Todos'; //use {} if using rafc as it is trying to find a default export for in your file.
 import {Footer} from './MyComponents/Footer';
+import React, { useState } from 'react';
  
 function App() {
 
   //arrow function of javascript, called from TodoItem.js 
   const onDelete =(todo)=>{
-      console.log("I am ondelete of todo", todo)
+      console.log("I am ondelete of todo", todo);
+      
+      //in React setTodos used to delete
+      setTodos(todos.filter((e)=>{
+        return e!==todo; //delete this todo
+      }
+      ))
   }
   
-  let todos = [
+  //setTodos a function that updates the todo
+  const [todos, setTodos] = useState([
     {
       sno: 1,
       title: "Go to market",
@@ -27,7 +35,7 @@ function App() {
       title: "Go to market 3",
       desc: "Get pens"
     }
-  ]
+  ]);
 
   return (
     <>
