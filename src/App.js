@@ -18,6 +18,20 @@ function App() {
       }
       ))
   }
+
+  const addTodo =(title,desc)=>{
+    console.log("Adding Todo",title,desc);
+    //Now adding todo
+    let sno = todos[todos.length-1].sno +1;//Calculating new serial number
+    const myTodo ={
+      title: title,
+      desc: desc,
+      sno: sno,
+    }
+    console.log(myTodo);
+    //use setTodos to add new todo in the full list/array 
+    setTodos([...todos,myTodo]);//... spreads the array elements, so this line is todo1,todo2,...,myTodo
+  }
   
   //setTodos a function that updates the todo
   const [todos, setTodos] = useState([
@@ -42,7 +56,7 @@ function App() {
     <>
    
     <Header title="My Todos List" searchBar={false}/>
-    <AddTodo />
+    <AddTodo addTodo ={addTodo}/>{/* first addTodo is variable, second addTodo is function defined above */}
     <Todos todos={todos} onDelete={onDelete}/>
     <Footer/>
 
