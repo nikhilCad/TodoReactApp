@@ -5,8 +5,8 @@ import React from 'react'
 export const Footer = () => {
 
     let footerStyle={
-        position: "absolute",
-        top: "140vh",
+        position: "relative",
+        top: "20vh",
         width: "100%"
     }
 
