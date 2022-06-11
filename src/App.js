@@ -22,7 +22,13 @@ function App() {
   const addTodo =(title,desc)=>{
     console.log("Adding Todo",title,desc);
     //Now adding todo
-    let sno = todos[todos.length-1].sno +1;//Calculating new serial number
+    let sno;
+    if (todos.length==0){
+      sno = 0;
+    }
+    else{
+      sno = todos[todos.length-1].sno +1;//Calculating new serial number
+    }
     const myTodo ={
       title: title,
       desc: desc,
