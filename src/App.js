@@ -41,21 +41,7 @@ function App() {
   
   //setTodos a function that updates the todo
   const [todos, setTodos] = useState([
-    {
-      sno: 1,
-      title: "Go to market",
-      desc: "Get vegetables"
-    },
-    {
-      sno: 2,
-      title: "Go to market 2",
-      desc: "Get fruits"
-    },
-    {
-      sno: 3,
-      title: "Go to market 3",
-      desc: "Get pens"
-    }
+
   ]);
 
   return (
