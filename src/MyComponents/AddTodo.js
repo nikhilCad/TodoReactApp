@@ -15,7 +15,8 @@ export const AddTodo = (props) => {
     }
     else{
     props.addTodo(title,desc);}{/*Function in App.js */}
-
+    setTitle("");
+    setDesc("");
   }
   return (
     <div className="container my-3">
