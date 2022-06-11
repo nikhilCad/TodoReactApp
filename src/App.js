@@ -4,12 +4,12 @@ import Header from './MyComponents/Header';
 import {Todos} from './MyComponents/Todos'; //use {} if using rafc as it is trying to find a default export for in your file.
 import {Footer} from './MyComponents/Footer';
 import {AddTodo} from './MyComponents/AddTodo';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
  
 function App() {
 
   let initTodo;
-  //load items, we later pass initTodo in our state hook at around line 56
+  //load items, we later pass initTodo in our state hook at around line 53
   if(localStorage.getItem("todos")===null){
     initTodo =[];
     
@@ -47,13 +47,15 @@ function App() {
     console.log(myTodo);
     //use setTodos to add new todo in the full list/array 
     setTodos([...todos,myTodo]);//... spreads the array elements, so this line is todo1,todo2,...,myTodo
-
-    localStorage.setItem("todos",JSON.stringify(todos));//save it
-
   }
-  
+
   //setTodos a function that updates the todo, initTodo is the load item
   const [todos, setTodos] = useState(initTodo);
+  
+  //as soon as todos in [todos] changes call the setItem line to save it. HAVE TO USE useEffect for proper saving
+  useEffect(() => {
+    localStorage.setItem("todos",JSON.stringify(todos));//save it
+  }, [todos])
 
   return (
     <>
