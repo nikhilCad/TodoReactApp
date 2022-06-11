@@ -6,7 +6,7 @@ export const Footer = () => {
 
     let footerStyle={
         position: "absolute",
-        top: "90vh",
+        top: "140vh",
         width: "100%"
     }
 

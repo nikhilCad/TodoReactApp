@@ -14,7 +14,7 @@ import {TodoItem} from './TodoItem';// .. to go up one place
 export const Todos = (props) => {
     return (
         <div className="container">
-            <h3 className="text-center my-3">Todos List</h3><br></br>
+            <h3 className=" my-3">Todos List</h3><br></br>
 
             {props.todos.length==0? "No Todos to display":
 
